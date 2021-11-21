@@ -5,75 +5,55 @@
  </body>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Парки Москвы</title>
-  <style type="text/css">
-   BODY {
-    font-family: Verdana, Arial, sans-serif; /* Рубленый шрифт на странице */
-   }
-   #top { /* Верхняя часть с заголовком страницы */
-    background: #CCFFCC; /* Цвет фона */
-    border: solid 1px black; /* Параметры рамки  */
-    padding: 15px 0 15px 10px; /* Поля вокруг текста */
-    margin-bottom: 15px; /* Расстояние между заголовком и колонками */
-    font-size: 36px; /* Размер шрифта */
-    font-weight: bold; /* Жирное начертание */
-    color: black; /* Цвет символов */
-	text-align: center; /* Выравнивание по центру */
-   }
-   #menu { /* Навигация по сайту */
-    width: 200px; /* Ширина меню */
-    background: #CCFFCC; /* Цвет фона */
-    border: solid 1px black; /* Параметры рамки */
-    float: left; /* Состыковка с другим слоем по горизонтали */
-    padding: 3px; /* Поля вокруг текста */
-   }
-   #menu A { /* Ссылки в меню */
-    font-size: 90%; /* Размер текста */
-   }
-   #content { /* Основное содержание страницы */
-    background: #CCFFCC; /* Цвет фона */
-    border: solid 1px black; /* Параметры рамки */
-    margin-left: 215px; /* Отступ слева */
-    margin-bottom: 15px /* Отступ снизу */
-   }
-   #bottom { /* Нижняя часть */
-    background: #CCFFCC; /* Цвет фона */
-    border: solid 1px black; /* Параметры рамки */
-    font-size: 90%; /* Размер шрифта */
-    padding: 3px; /* Поля вокруг текста */
-   }
-   H1 { /* Заголовок страницы */
-    text-align: center; /* Выравнивание по центру */
-    font-size: 210%; /* Размер шрифта */
-    font-family: "Times New Roman", Times, serif; /* Шрифт с засечками */ 
-    font-weight: normal; /* Нормальное начертание */
-    color: black; /* Цвет текста */
-    padding: 0; /* Убираем значение полей */
-    margin: 0; /* Обнуляем значения отступов */ 
-   }
-    H2 { /* Подзаголовок страницы */
-    text-align: center; /* Выравнивание по центру */
-    font-size: 150%; /* Размер шрифта */
-    font-family: "Times New Roman", Times, serif; /* Шрифт с засечками */ 
-    font-weight: normal; /* Нормальное начертание */
-    color: black; /* Цвет текста */
-    padding: 0; /* Убираем значение полей */
-    margin: 0; /* Обнуляем значения отступов */ 
-   }
-   #content P { 
-    font-size: 90%; /* Размер шрифта */
-    text-align: justify; /* Выравнивание по ширине */
-    padding: 10px; /* Поля вокруг текста */
-    margin: 0 /* Обнуляем отступы */
-   }
-   #content IMG {
- display: block;
-  margin-left: auto;
-  margin-right: auto;
-   }
-  </style>
+   <style type="text/css">
+  @import url("style.css");
+
+  </style> 
  </head>
  <body>
-  <div id="top">Парки Москвы</div>
+  <script src="slider.js"></script>  
+ <div id="top">
+ 
+  <div class="slider">
+    <div class="item">
+        <img src="images/Park_50_Oct_1.jpg">
+        <div class="slideText"><a href="park_1.html">Парк 50-летия Октября</a></div>
+    </div>
+
+    <div class="item" style="display: none">
+        <img src="images/Park_Skol_1.jpg">
+        <div class="slideText"><a href="park_2.html">Сокольники</a></div>
+    </div>
+
+    <div class="item"style="display: none">
+        <img src="images/Park_Alex_sad_1.jpg">
+        <div class="slideText"><a href="park_3.html">Алекса́ндровский сад</a></div>
+    </div>
+	
+	<div class="item"style="display: none">
+        <img src="images/Park_Patriarshie_prud_1.jpg">
+        <div class="slideText"><a href="park_4.html">Патриаршие пруды</a></div>
+    </div>
+	
+	<div class="item"style="display: none">
+        <img src="images/Park_Neskychn_sad_1.jpg">
+        <div class="slideText"><a href="park_5.html">Неску́чный сад</a></div>
+    </div>
+
+    <a class="prev" onclick="minusSlide()">&#10094;</a>
+    <a class="next" onclick="plusSlide()">&#10095;</a>
+</div>
+
+<div class="slider-dots">
+    <span class="slider-dots_item" onclick="currentSlide(1)"></span> 
+    <span class="slider-dots_item" onclick="currentSlide(2)"></span> 
+    <span class="slider-dots_item" onclick="currentSlide(3)"></span> 
+</div>
+ 
+ 
+ 
+ 
+ </div>
   <div id="menu">
    <a href="index.html">Главная страница</a><br>
    <a href="park_1.html">Парк 50-летия Октября</a><br>
@@ -81,6 +61,7 @@
     <a href="park_3.html">Алекса́ндровский сад</a><br>
 	<a href="park_4.html">Патриаршие пруды</a><br>
 	<a href="park_5.html">Неску́чный сад</a><br>
+	<a href="feedback.html">Обратная связь</a><br>
   </div>
   <div id="content">
    <h1>Алекса́ндровский сад</h1>

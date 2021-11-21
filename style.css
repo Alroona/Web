@@ -1,0 +1,194 @@
+    BODY {
+    font-family: Verdana, Arial, sans-serif; /* Рубленый шрифт на странице */
+   }
+   #top { /* Верхняя часть с заголовком страницы */
+    background: #CCFFCC; /* Цвет фона */
+    border: solid 1px black; /* Параметры рамки  */
+    padding: 15px 0 15px 10px; /* Поля вокруг текста */
+    margin-bottom: 15px; /* Расстояние между заголовком и колонками */
+    font-size: 36px; /* Размер шрифта */
+    font-weight: bold; /* Жирное начертание */
+    color: black; /* Цвет символов */
+	//text-align: center; /* Выравнивание по центру */
+   }
+   #menu { /* Навигация по сайту */
+    width: 200px; /* Ширина меню */
+    background: #CCFFCC; /* Цвет фона */
+    border: solid 1px black; /* Параметры рамки */
+    float: left; /* Состыковка с другим слоем по горизонтали */
+    padding: 3px; /* Поля вокруг текста */
+   }
+   #menu A { /* Ссылки в меню */
+    font-size: 90%; /* Размер текста */
+   }
+   #content { /* Основное содержание страницы */
+    background: #CCFFCC; /* Цвет фона */
+    border: solid 1px black; /* Параметры рамки */
+    margin-left: 215px; /* Отступ слева */
+    margin-bottom: 15px /* Отступ снизу */
+   }
+   #bottom { /* Нижняя часть */
+    background: #CCFFCC; /* Цвет фона */
+    border: solid 1px black; /* Параметры рамки */
+    font-size: 90%; /* Размер шрифта */
+    padding: 3px; /* Поля вокруг текста */
+   }
+   H1 { /* Заголовок страницы */
+    text-align: center; /* Выравнивание по центру */
+    font-size: 210%; /* Размер шрифта */
+    font-family: "Times New Roman", Times, serif; /* Шрифт с засечками */ 
+    font-weight: normal; /* Нормальное начертание */
+    color: black; /* Цвет текста */
+    padding: 0; /* Убираем значение полей */
+    margin: 0; /* Обнуляем значения отступов */ 
+   }
+   H2 { /* Подзаголовок страницы */
+    text-align: center; /* Выравнивание по центру */
+    font-size: 150%; /* Размер шрифта */
+    font-family: "Times New Roman", Times, serif; /* Шрифт с засечками */ 
+    font-weight: normal; /* Нормальное начертание */
+    color: black; /* Цвет текста */
+    padding: 0; /* Убираем значение полей */
+    margin: 0; /* Обнуляем значения отступов */ 
+   }
+   #content P { 
+    font-size: 90%; /* Размер шрифта */
+    text-align: justify; /* Выравнивание по ширине */
+    padding: 10px; /* Поля вокруг текста */
+    margin: 0 /* Обнуляем отступы */
+   }
+   #content IMG {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+   
+   
+  
+/* Собственно сам слайдер */
+.slider{
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    height: 300px;
+    margin-bottom: 15px;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    border: none !important;
+    box-shadow: none !important;
+}
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Заголовок слайда */
+.slideText {
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    /* Выравнивание текста по горизонтали и по вертикали*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* Тень*/
+    text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+
+
+
+.slideText {
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    /* Выравнивание текста по горизонтали и по вертикали*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* Тень*/
+    text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+	.slideText a {
+		text-decoration: none;
+	}
+	.slideText a:link {
+	color: #fff;
+	}
+	.slideText a:visited {
+	color: #fff;
+	}
+	.slideText a:hover {
+	color: #fff; 
+	}
+	.slideText a:active {
+	color: #fff;
+
+	}
+
+
+
+
+/* Кружочки */
+.slider-dots {
+    text-align: center;
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,
+.slider-dots_item:hover {
+    background-color: #aaa;
+}
+/* Анимация слайдов */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
